@@ -20,6 +20,10 @@ References: [https://github.com/quartznet/quartznet/issues/1021](https://github.
 
 # My Solution
 
-* I stop using [DisallowConcurrentExecution] attribute.
+* I stop using DisallowConcurrentExecution attribute.
 * Instead, I make a object that will be locked when a job is run, and will be released when the job is finished.
 * When a new job is run while a previous one has not been finished, the new run will try to get that object. If it cannot (due to the object still being locked), then the new run stops immediately without doing anything more.
+
+# Screenshot(s)
+
+![img1](screenshots/img1.png)
